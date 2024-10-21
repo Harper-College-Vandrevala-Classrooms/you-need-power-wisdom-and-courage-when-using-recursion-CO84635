@@ -60,4 +60,26 @@ public class TestTriangleNumberCalculator {
     public void testBasicScenario() {
         assertEquals(3, TriangleNumberCalculator.value(2));
     }
+
+    @Test
+    public void testValue() {
+        assertEquals(1, TriangleNumberCalculator.value(1));
+        assertEquals(3, TriangleNumberCalculator.value(2));
+        assertEquals(6, TriangleNumberCalculator.value(3));
+        assertEquals(10, TriangleNumberCalculator.value(4));
+    }
+
+    @Test
+    public void testAdd() {
+        assertEquals(2, TriangleNumberCalculator.add(1, 1));
+        assertEquals(9, TriangleNumberCalculator.add(2, 3));
+        assertEquals(13, TriangleNumberCalculator.add(4, 2));
+    }
+
+    @Test
+    public void testSubtract() {
+        assertEquals(0, TriangleNumberCalculator.subtract(1, 1));
+        assertEquals(-3, TriangleNumberCalculator.subtract(2, 3));
+        assertEquals(7, TriangleNumberCalculator.subtract(4, 2));
+    }
 }
