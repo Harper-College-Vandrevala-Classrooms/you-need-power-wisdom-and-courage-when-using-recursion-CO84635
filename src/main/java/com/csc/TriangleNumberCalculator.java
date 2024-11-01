@@ -23,6 +23,12 @@ public class TriangleNumberCalculator {
     } 
 
     public static int multiply(int n, int m) {
+        if (n < 1) {
+            throw new IllegalArgumentException();
+        } 
+        if (m < 1) {
+            throw new IllegalArgumentException();
+        } 
         return value(n) * value(m);
     }
 
