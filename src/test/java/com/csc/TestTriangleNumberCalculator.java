@@ -93,7 +93,7 @@ public class TestTriangleNumberCalculator {
     @Test
     public void testSequenceTwo(){
         List<Integer> result2 = TriangleNumberCalculator.sequence(2);
-        assertEquals(List.of(1, 2), result2);
+        assertEquals(List.of(1, 3), result2);
     }
 
     @Test
@@ -127,7 +127,7 @@ public class TestTriangleNumberCalculator {
 
     @Test
     public void testMultipliedOneAndTwo(){
-        assertEquals(3, TriangleNumberCalculator.multiply(1,3));
+        assertEquals(3, TriangleNumberCalculator.multiply(1,2));
     }
 
     @Test
