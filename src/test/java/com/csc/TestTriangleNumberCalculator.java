@@ -136,7 +136,7 @@ public class TestTriangleNumberCalculator {
     }
     @Test
     public void testMultipliedFiveAndFive(){
-        assertEquals(225, TriangleNumberCalculator.multiply(15,15));
+        assertEquals(225, TriangleNumberCalculator.multiply(5,5));
     }
     @Test
     public void testMultipliedOneHundredAndOneHundred(){
@@ -144,15 +144,21 @@ public class TestTriangleNumberCalculator {
     }
     @Test
     public void testMultipliedZero(){
-        assertEquals(0, TriangleNumberCalculator.multiply(0,0));
+        assertThrows(IllegalArgumentException.class, () -> {
+            TriangleNumberCalculator.multiply(0, 0);
+        });
     }
     @Test
     public void testMultipliedZeroAndOne(){
-        assertEquals(0, TriangleNumberCalculator.multiply(0,1));
+        assertThrows(IllegalArgumentException.class, () -> {
+            TriangleNumberCalculator.multiply(0, 1);
+        });
     }
 
     @Test
     public void testMultipliedOneAndZero(){
-        assertEquals(0, TriangleNumberCalculator.multiply(1,0));
+        assertThrows(IllegalArgumentException.class, () -> {
+            TriangleNumberCalculator.multiply(1, 0);
+        });
     }
 }
