@@ -140,7 +140,7 @@ public class TestTriangleNumberCalculator {
     }
     @Test
     public void testMultipliedOneHundredAndOneHundred(){
-        assertEquals(TriangleNumberCalculator.value(10) * TriangleNumberCalculator.value(10), TriangleNumberCalculator.multiply(100,100));
+        assertEquals(TriangleNumberCalculator.value(100) * TriangleNumberCalculator.value(100), TriangleNumberCalculator.multiply(100,100));
     }
     @Test
     public void testMultipliedZero(){
