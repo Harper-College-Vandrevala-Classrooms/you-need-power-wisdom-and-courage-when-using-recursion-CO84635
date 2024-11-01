@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.util.List;
 
 public class TestTriangleNumberCalculator {
 
@@ -81,5 +82,77 @@ public class TestTriangleNumberCalculator {
         assertEquals(0, TriangleNumberCalculator.subtract(1, 1));
         assertEquals(-3, TriangleNumberCalculator.subtract(2, 3));
         assertEquals(7, TriangleNumberCalculator.subtract(4, 2));
+    }
+
+    @Test
+    public void testSequenceOne(){
+        List<Integer> result1 = TriangleNumberCalculator.sequence(1);
+        assertEquals(List.of(1), result1);
+    }
+
+    @Test
+    public void testSequenceTwo(){
+        List<Integer> result2 = TriangleNumberCalculator.sequence(2);
+        assertEquals(List.of(1, 2), result2);
+    }
+
+    @Test
+    public void testSequenceFive(){
+        List<Integer> result5 = TriangleNumberCalculator.sequence(7);
+        assertEquals(List.of(1, 3, 6, 10 ,15, 21 , 28 ), result5);
+    }
+
+    @Test
+    public void testSequenceZero() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            TriangleNumberCalculator.sequence(0);
+        });
+    }
+    
+    @Test
+    public void testSequenceNegative() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            TriangleNumberCalculator.sequence(-1);
+        });
+    }
+
+    @Test
+    public void testSequenceThirty(){
+        List<Integer> result30 = TriangleNumberCalculator.sequence(30);
+        assertEquals(List.of(1, 3, 6, 10, 15, 21, 28, 36, 45, 55,
+        66, 78, 91, 105, 120, 136, 153, 171, 190, 210,
+        231, 253, 276, 300, 325, 351, 378, 406, 435, 465)
+        , result30);
+    }
+
+    @Test
+    public void testMultipliedOneAndTwo(){
+        assertEquals(3, TriangleNumberCalculator.multiply(1,3));
+    }
+
+    @Test
+    public void testMultipliedThreeAndFour(){
+        assertEquals(60, TriangleNumberCalculator.multiply(3,4));
+    }
+    @Test
+    public void testMultipliedFiveAndFive(){
+        assertEquals(225, TriangleNumberCalculator.multiply(15,15));
+    }
+    @Test
+    public void testMultipliedOneHundredAndOneHundred(){
+        assertEquals(25502500, TriangleNumberCalculator.multiply(100,100));
+    }
+    @Test
+    public void testMultipliedZero(){
+        assertEquals(0, TriangleNumberCalculator.multiply(0,0));
+    }
+    @Test
+    public void testMultipliedZeroAndOne(){
+        assertEquals(0, TriangleNumberCalculator.multiply(0,1));
+    }
+
+    @Test
+    public void testMultipliedOneAndZero(){
+        assertEquals(0, TriangleNumberCalculator.multiply(1,0));
     }
 }
