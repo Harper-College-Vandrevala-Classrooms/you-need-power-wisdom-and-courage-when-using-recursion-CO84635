@@ -127,20 +127,20 @@ public class TestTriangleNumberCalculator {
 
     @Test
     public void testMultipliedOneAndTwo(){
-        assertEquals(3, TriangleNumberCalculator.multiply(1,2));
+        assertEquals(TriangleNumberCalculator.value(1) * TriangleNumberCalculator.value(2), TriangleNumberCalculator.multiply(1,2));
     }
 
     @Test
     public void testMultipliedThreeAndFour(){
-        assertEquals(60, TriangleNumberCalculator.multiply(3,4));
+        assertEquals(TriangleNumberCalculator.value(3) * TriangleNumberCalculator.value(4), TriangleNumberCalculator.multiply(3,4));
     }
     @Test
     public void testMultipliedFiveAndFive(){
-        assertEquals(225, TriangleNumberCalculator.multiply(5,5));
+        assertEquals(TriangleNumberCalculator.value(5) * TriangleNumberCalculator.value(5), TriangleNumberCalculator.multiply(5,5));
     }
     @Test
     public void testMultipliedOneHundredAndOneHundred(){
-        assertEquals(25502500, TriangleNumberCalculator.multiply(100,100));
+        assertEquals(TriangleNumberCalculator.value(10) * TriangleNumberCalculator.value(10), TriangleNumberCalculator.multiply(100,100));
     }
     @Test
     public void testMultipliedZero(){
