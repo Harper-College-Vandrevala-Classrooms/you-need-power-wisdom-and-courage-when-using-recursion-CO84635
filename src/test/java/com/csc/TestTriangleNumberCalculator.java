@@ -165,7 +165,7 @@ public class TestTriangleNumberCalculator {
     @Test
     public void testValueLargeInput() {
         assertThrows(StackOverflowError.class, () -> {
-        TriangleNumberCalculator.value(10000); //
+        TriangleNumberCalculator.value(1000000000); //
         });
     }
 
