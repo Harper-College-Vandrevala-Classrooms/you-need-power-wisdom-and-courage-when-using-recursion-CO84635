@@ -161,4 +161,16 @@ public class TestTriangleNumberCalculator {
             TriangleNumberCalculator.multiply(1, 0);
         });
     }
+
+    @Test
+    public void testValueLargeInput() {
+        assertThrows(StackOverflowError.class, () -> {
+        TriangleNumberCalculator.value(10000); //
+        });
+    }
+
+    @Test
+    public void testMultipliedOneAndOne() {
+        assertEquals(TriangleNumberCalculator.value(1) * TriangleNumberCalculator.value(1), TriangleNumberCalculator.multiply(1,1));   
+    }
 }
